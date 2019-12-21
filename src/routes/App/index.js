@@ -9,6 +9,7 @@ import {
 import Pengeluaran from '../Pengeluaran';
 import User from '../User';
 import Transaksi from '../Transaksi';
+import PengeluaranList from '../PengeluaranList';
   
 const { SubMenu } = Menu;
 const { Header, Content, Sider, Footer } = Layout;
@@ -20,19 +21,9 @@ class App extends React.Component {
 
     render(){
         return (
-            <Layout style={{height: '100vh'}}>
+            <Layout style={{minHeight: '100vh'}}>
                 <Header className="header">
                     <h2 style={{color:'white'}}>Pengeluaranku</h2>
-                    <Menu
-                        theme="dark"
-                        mode="horizontal"
-                        defaultSelectedKeys={['2']}
-                        style={{ lineHeight: '64px' }}
-                    >
-                        <Menu.Item key="1">nav 1</Menu.Item>
-                        <Menu.Item key="2">nav 2</Menu.Item>
-                        <Menu.Item key="3">nav 3</Menu.Item>
-                    </Menu>
                 </Header>
                 <Layout>
                     <Sider width={200} style={{ background: '#fff' }}>
@@ -51,7 +42,7 @@ class App extends React.Component {
                                     </span>
                                 }
                             >
-                                <Menu.Item onClick={()=>this.navigateTo('/app/pengeluaran')} key="1">Pengeluaran</Menu.Item>
+                                <Menu.Item onClick={()=>this.navigateTo('/app/pengeluaran_list')} key="1">Pengeluaran</Menu.Item>
                                 <Menu.Item onClick={()=>this.navigateTo('/app/transaksi')} key="2">Transaksi</Menu.Item>
                             </SubMenu>
                             <SubMenu
@@ -65,6 +56,7 @@ class App extends React.Component {
                             >
                                 <Menu.Item onClick={()=>this.navigateTo('/app/user')} key="5">User</Menu.Item>
                             </SubMenu>
+                            <Menu.Item onClick={()=>this.navigateTo('/login')} key="6">Logout</Menu.Item>
                         </Menu>
                     </Sider>
                     <Layout style={{ padding: '0 24px 24px' }}>
@@ -86,6 +78,7 @@ class App extends React.Component {
                                 <Route exact path="/app/transaksi" component={Transaksi}/>
                                 <Route exact path="/app/user" component={User}/>
                                 <Route exact path="/app/pengeluaran" component={Pengeluaran}/>
+                                <Route exact path="/app/pengeluaran_list" component={PengeluaranList}/>
                             </Switch>
                         </Content>
                         <Footer style={{textAlign : 'center'}}>Copyright EMI Bootcamp @2019</Footer>

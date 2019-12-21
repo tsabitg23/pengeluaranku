@@ -10,7 +10,8 @@ import Pengeluaran from './Pengeluaran';
 import User from './User';
 import Transaksi from './Transaksi';
 import App from './App';
-  
+import Login from './Login';
+
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
@@ -19,7 +20,8 @@ class MainRouter extends React.Component {
         return (
             <Router>
                 <Switch>
-                    <Route exact path="/" component={App}/>
+                    <Route exact path="/" component={Login}/>
+                    <Route exact path="/login" component={Login}/>
                     <Route path="/app" component={App}/>
                 </Switch>
             </Router>
