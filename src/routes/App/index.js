@@ -22,7 +22,7 @@ class App extends React.Component {
         return (
             <Layout style={{height: '100vh'}}>
                 <Header className="header">
-                    <h2 style={{color:'white'}}>Pengeluaranku</h2>
+                    <h2 style={{color:'white'}}>Pengeluaranku App</h2>
                     <Menu
                         theme="dark"
                         mode="horizontal"
