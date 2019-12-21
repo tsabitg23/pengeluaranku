@@ -37,7 +37,7 @@ class App extends React.Component {
                                 key="sub1"
                                 title={
                                     <span>
-                                        <Icon type="book" />
+                                        <Icon type="fund" />
                                         Transaksi
                                     </span>
                                 }
