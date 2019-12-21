@@ -51,11 +51,7 @@ class App extends React.Component {
                                     </span>
                                 }
                             >
-<<<<<<< HEAD
-                                <Menu.Item onClick={()=>this.navigateTo('/app/pengeluaran')} key="1">Pengeluaran kuuuu</Menu.Item>
-=======
                                 <Menu.Item onClick={()=>this.navigateTo('/app/pengeluaran')} key="1">Pengeluaranku menu</Menu.Item>
->>>>>>> 75a8028467a574c4cabfb8b315fe053bd06bea0f
                                 <Menu.Item onClick={()=>this.navigateTo('/app/transaksi')} key="2">Transaksi</Menu.Item>
                             </SubMenu>
                             <SubMenu
